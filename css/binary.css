@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+:root {
+    --gradient: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+body {
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+}
+.value_after_converting::selection {
+    background-color: #6e65c1;
+}
+section::-webkit-scrollbar {
+  width: 7px;
+}
+button {
+    border: none;
+    outline: none;
+}
+section::-webkit-scrollbar-track {
+  background-color: var(--second-color);
+    border-radius: 20px;
+}
+
+section::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: var(--gradient);
+}
+section {
+    width: 80%;
+    height: 90vh;
+    overflow-y: auto;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    box-shadow: 0px 0px 11px 0px #111;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1111;
+}
+.navbar a {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.navbar-toggler {
+    background: linear-gradient(to right, #6e65c1, #544ba7, #3c3c9b);
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: -1550px;
+    bottom:0 ;
+    width: 100%;
+    height: 3px;
+    background: #0398ba;
+    transition: 0.5s;
+}
+.navbar a:hover::after {
+    left: 0;
+}
+.text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section .text > p {
+    max-width: 50%;
+    background: var(--gradient);
+    opacity: 0.8;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1199px) {
+    section .text > p {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+    section .text > p {
+        font-size: 12px;
+    }
+    textarea {
+        width: 100% !important;
+    }
+    button {
+        padding: 15px in !important;
+    }
+    .value_after_converting {
+        width: 100% !important; 
+    }
+}
+
+
+section table {
+    margin-top: 100px;
+    overflow-y: auto;
+}
+section table tr {
+    position: relative;
+
+}
+section table tr::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--gradient);
+    z-index: 2;
+    opacity: 0.6;
+}
+section table tr td {
+    border: 2px solid #6e65c1;
+    padding: 10px !important;
+    font-weight: bolder;
+    position: relative;
+    z-index: 5;
+}
