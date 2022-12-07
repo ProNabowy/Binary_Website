@@ -5,7 +5,6 @@ for (const key in binary_object)
 {
     HTMLObject[key] = [binary_object[key], `${key.charCodeAt(0)}`];
 }
-console.log(HTMLObject);
 // Darw HTML Table
 const darwTable = _ =>
 {
@@ -21,5 +20,3 @@ const darwTable = _ =>
     }
 }
 darwTable();
-
-console.log("Nabowy");
