@@ -1,9 +1,8 @@
-
-import {binary_object} from "./binary_data.js";
+let letters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'spase', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '?', ';', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '=', '+', '/', '.', '"', "'", '\\', '|', ':']
 const HTMLObject = {};
-for (const key in binary_object)
+for (const key of letters)
 {
-    HTMLObject[key] = [binary_object[key], `${key.charCodeAt(0)}`];
+    HTMLObject[key] = [key.charCodeAt(0).toString(2), `${key.charCodeAt(0)}`];
 }
 // Darw HTML Table
 const darwTable = _ =>
